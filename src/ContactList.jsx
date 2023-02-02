@@ -11,7 +11,13 @@ const ContactList = (props) => {
           <th>Email</th>
         </tr>
         {props.contacts.map((contact) => {
-          return <ContactRow contact={contact} key={contact.id} />;
+          return (
+            <ContactRow
+              contact={contact}
+              key={contact.id}
+              selectContact={props.selectContact}
+            />
+          );
         })}
       </tbody>
     </table>
